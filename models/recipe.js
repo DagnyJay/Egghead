@@ -10,13 +10,13 @@ const commentSchema = new Schema({
 });
 
 const recipeSchema = new Schema({
-    title: {type: [String], required: true},
-    ingredients: {type: [String], required: true},
-    instructions: {type: String, required: true},
+    title: {type: String, required: true},
+    ingredients: {type: String, required: false},
+    instructions: {type: String, required: false},
     img: {data: Buffer, contentType: String, required: false},
-    servings: {type: Number, required: true},
-    prepTime: {type: String, required: true},
-    cookTime: {type: String, required: true},
+    servings: {type: Number, required: false, min: 1, max: 20},
+    prepTime: {type: String, required: false},
+    cookTime: {type: String, required: false},
     comments: [commentSchema]
 });
 

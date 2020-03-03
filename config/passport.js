@@ -13,6 +13,7 @@ passport.use(new GoogleStrategy({
       if (err) return cb(err);
       if (user) {
         //returning user
+        console.log(user);
         return cb(null, user);
       } else {
         //new user via Oauth
