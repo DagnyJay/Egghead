@@ -1,6 +1,39 @@
 body {
   padding: 50px;
   font-family: 'Pacifico', serif;
+  background-image: url(./white-egg-speckled.jpg);
+  background-color: #FFFFFF;
+}
+
+.cards {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.card {
+  box-shadow: 0 0 3px;
+}
+
+.card_content {
+  line-height: 1.5;
+  font-size: 0.9em;
+  padding: 15px;
+  background-color: #fef98c;
+}
+
+.card_info {
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  font-size: 0.9em;
+  border-bottom: 2px solid;
+  background: #eeeeee;
+}
+
+.card_link {
+  text-decoration: none;
 }
 
 a {
