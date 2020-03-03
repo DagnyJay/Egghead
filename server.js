@@ -8,7 +8,6 @@ const passport = require('passport');
 
 require('dotenv').config();
 
-
 require('./config/database');
 
 require('./config/passport');

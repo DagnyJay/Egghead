@@ -3,8 +3,8 @@
 <form id="new-recipe-form" action="/recipes" method="POST">
     <label>Recipe Name:</label>
     <input type="text" name="title">
-    <label>Key Ingredient</label>
-    <select name="ingredients">
+    <label>Key Ingredient:</label>
+    <select name="keyIngredient">
         <option value="Bacon">Bacon</option>
         <option value="Beans">Beans</option>
         <option value="Beef">Beef</option>
@@ -15,16 +15,18 @@
         <option value="Pasta">Pasta</option>
         <option value="Rice">Rice</option>
     </select>
-    <label>Instructions</label>
-    <input type="text" name="instructions">
+    <label>Ingredients:</label>
+    <textarea rows="4" wrap="soft" name="ingredients"> </textarea>
+    <label>Instructions:</label>
+    <textarea rows="4" wrap="soft" name="instructions"> </textarea>
     <label>Image?</label>
     <input type="text" name="food-pic">
-    <label>Servings</label>
+    <label>Servings:</label>
     <input type="Number" name="servings">
-    <label>Prep Time</label>
-    <input type="Number" name="prepTime">
-    <label>Cook Time</label>
-    <input type="Number" name="cookTime"> 
+    <label>Prep Time:</label>
+    <input type="Number" name="prepTime"> mins
+    <label>Cook Time:</label>
+    <input type="Number" name="cookTime"> mins
     <input type="submit" value="Add Recipe">
 </form>
 

@@ -11,6 +11,7 @@ const commentSchema = new Schema({
 
 const recipeSchema = new Schema({
     title: {type: String, required: true},
+    keyIngredient: {type: String, required: false},
     ingredients: {type: String, required: false},
     instructions: {type: String, required: false},
     img: {data: Buffer, contentType: String, required: false},
