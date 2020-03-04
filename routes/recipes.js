@@ -9,4 +9,6 @@ router.get('/:id/edit', recipesCtrl.edit);
 
 router.post('/', recipesCtrl.create);
 
+router.put('/:id', recipesCtrl.update);
+
 module.exports = router;

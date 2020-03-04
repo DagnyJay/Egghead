@@ -17,19 +17,18 @@
         <option value="Rice" <%= recipe.keyIngredient === 'Rice' ? 'selected' : null %>>Rice</option>
     </select>
     <label>Ingredients:</label>
-    <textarea rows="4" wrap="soft" name="ingredients"> </textarea>
+    <textarea rows="4" wrap="soft" name="ingredients" value="<%= recipe.ingredients %>"></textarea>
     <label>Instructions:</label>
-    <textarea rows="4" wrap="soft" name="instructions"> </textarea>
+    <textarea rows="4" wrap="soft" name="instructions" value="<%= recipe.instructions %>"></textarea>
     <label>Image?</label>
-    <input type="text" name="food-pic">
+    <input type="text" name="img" value="<%= recipe.img %>">
     <label>Servings:</label>
-    <input type="Number" name="servings">
+    <input type="Number" name="servings" value="<%= recipe.servings %>">
     <label>Prep Time:</label>
-    <input type="Number" name="prepTime"> mins
+    <input type="Number" name="prepTime" value="<%= recipe.prepTime %>"> mins
     <label>Cook Time:</label>
-    <input type="Number" name="cookTime"> mins
-    <input type="submit" value="Add Recipe">
+    <input type="Number" name="cookTime" value="<%= recipe.cookTime %>"> mins
+    <input type="submit" value="Edit Recipe">
 </form>
-
 
 <%- include('../partials/footer') %>

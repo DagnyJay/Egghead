@@ -5,7 +5,8 @@ module.exports = {
     show,
     new: newRecipe,
     create, 
-    edit
+    edit,
+    update
 };
 
 function index(req, res) {
@@ -41,4 +42,11 @@ function edit(req, res) {
             idx: req.params.id
         });
     })
+}
+
+function update(req, res) {
+    Recipe.update(req.body, function (err) {
+        if (err) return res.redirect('recipes/edit');
+        res.redirect(`/recipes/${req.params.id}`);
+    });
 }
