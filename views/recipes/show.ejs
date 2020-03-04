@@ -21,4 +21,8 @@
 
 </section>
 
+<form action="/recipes/<%= recipe._id %>?_method=DELETE" class="delete-form" method="POST">
+    <button class="delete-recipe" type="submit">Delete?</button>
+</form>
+
 <%- include('../partials/footer') %>

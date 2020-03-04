@@ -19,15 +19,17 @@ main {
 body {
   padding: 50px;
   font-family: 'Pacifico', serif;
-  background-image: url(https://imgur.com/ADrgRvy);
-  background-color: #FFFFFF;
+  background-image: url('/images/white-egg-speckled.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #FFAE00
 }
 
 .cards {
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 25vw 25vw 25vw;
-  gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 .card {
