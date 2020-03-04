@@ -3,18 +3,18 @@
 <form id="edit-recipe-form" action="/recipes/<%= idx %>?_method=PUT" method="POST" autocomplete="off">
     <h3>Edit Recipe</h3>
     <label>Recipe Name:</label>
-    <input type="text" name="title">
+    <input type="text" name="title" value="<%= recipe.title %>">
     <label>Key Ingredient:</label>
     <select name="keyIngredient">
-        <option value="Bacon">Bacon</option>
-        <option value="Beans">Beans</option>
-        <option value="Beef">Beef</option>
-        <option value="Chicken">Chicken</option>
-        <option value="Eggs">Eggs</option>
-        <option value="Lentils">Lentils</option>
-        <option value="Potato">Potatoes</option>
-        <option value="Pasta">Pasta</option>
-        <option value="Rice">Rice</option>
+        <option value="Bacon" <%= recipe.keyIngredient === 'Bacon' ? 'selected' : null %>>Bacon</option>
+        <option value="Beans" <%= recipe.keyIngredient === 'Beans' ? 'selected' : null %>>Beans</option>
+        <option value="Beef" <%= recipe.keyIngredient === 'Beef' ? 'selected' : null %>>Beef</option>
+        <option value="Chicken" <%= recipe.keyIngredient === 'Chicken' ? 'selected' : null %>>Chicken</option>
+        <option value="Eggs" <%= recipe.keyIngredient === 'Eggs' ? 'selected' : null %>>Eggs</option>
+        <option value="Lentils" <%= recipe.keyIngredient === 'Lentils' ? 'selected' : null %>>Lentils</option>
+        <option value="Potatoes" <%= recipe.keyIngredient === 'Potatoes' ? 'selected' : null %>>Potatoes</option>
+        <option value="Pasta" <%= recipe.keyIngredient === 'Pasta' ? 'selected' : null %>>Pasta</option>
+        <option value="Rice" <%= recipe.keyIngredient === 'Rice' ? 'selected' : null %>>Rice</option>
     </select>
     <label>Ingredients:</label>
     <textarea rows="4" wrap="soft" name="ingredients"> </textarea>

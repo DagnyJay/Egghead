@@ -35,8 +35,10 @@ function show(req, res) {
 }
 
 function edit(req, res) {
-    res.render('recipes/edit', {
-        recipe: Recipe.findOne(req.params.id),
-        idx: req.params.id
-    });
+    Recipe.findById(req.params.id, function (err, recipe) {
+        res.render('recipes/edit', {
+            recipe,
+            idx: req.params.id
+        });
+    })
 }
