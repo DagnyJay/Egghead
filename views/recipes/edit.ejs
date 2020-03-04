@@ -1,0 +1,35 @@
+<%- include('../partials/header') %>
+
+<form id="edit-recipe-form" action="/recipes/<%= idx %>?_method=PUT" method="POST" autocomplete="off">
+    <h3>Edit Recipe</h3>
+    <label>Recipe Name:</label>
+    <input type="text" name="title">
+    <label>Key Ingredient:</label>
+    <select name="keyIngredient">
+        <option value="Bacon">Bacon</option>
+        <option value="Beans">Beans</option>
+        <option value="Beef">Beef</option>
+        <option value="Chicken">Chicken</option>
+        <option value="Eggs">Eggs</option>
+        <option value="Lentils">Lentils</option>
+        <option value="Potato">Potatoes</option>
+        <option value="Pasta">Pasta</option>
+        <option value="Rice">Rice</option>
+    </select>
+    <label>Ingredients:</label>
+    <textarea rows="4" wrap="soft" name="ingredients"> </textarea>
+    <label>Instructions:</label>
+    <textarea rows="4" wrap="soft" name="instructions"> </textarea>
+    <label>Image?</label>
+    <input type="text" name="food-pic">
+    <label>Servings:</label>
+    <input type="Number" name="servings">
+    <label>Prep Time:</label>
+    <input type="Number" name="prepTime"> mins
+    <label>Cook Time:</label>
+    <input type="Number" name="cookTime"> mins
+    <input type="submit" value="Add Recipe">
+</form>
+
+
+<%- include('../partials/footer') %>
