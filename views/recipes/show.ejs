@@ -1,21 +1,28 @@
 <%- include('../partials/show') %>
 
-<div class="show-container">
 <section id="show-recipe">
-    <div><%= recipe.title %></div>
-    <div>Key Ingredients:</div>
-    <div><%= recipe.keyIngredients %></div>
-    <div>Ingredients:</div>
-    <div><%= recipe.ingredients %></div>
-    <div>Instructions:</div>
-    <div><%= recipe.instructions %></div>
-    <div><%= recipe.img %></div>
-    <div>Servings:</div>
-    <div><%= recipe.servings %></div>
-    <div>Prep Time:</div>
-    <div><%= recipe.prepTime %></div>
-    <div>Cook Time:</div>
-    <div><%= recipe.cookTime%></div>
+    <div class="recipe_title"><%= recipe.title %></div>
+    <div class="key_ingredient">Key Ingredients:
+        <h4><%= recipe.keyIngredients %></h4>
+    </div>
+    <div class="ingredient">Ingredients:
+        <h4><%= recipe.ingredients %></h4>
+    </div>
+    <div class="instructions">Instructions:
+        <h4><%= recipe.instructions %></h4>
+    </div>
+    <div class="recipe_img">
+        <img src="<%= recipe.img %>">
+    </div>
+    <div class="servings">Servings:
+        <h4><%= recipe.servings %></h4>
+    </div>
+    <div class="prepTime">Prep Time:
+        <h4><%= recipe.prepTime %></dh4>
+    </div>
+    <div class="cookTime">Cook Time:
+        <h4><%= recipe.cookTime%></h4>
+    </div>
 </section>
 
 <section id="show-comments">
@@ -50,5 +57,5 @@
     <h3> Have you made this? Have any tips? Share below! </h3>
 <% } %>
 </section>
-</div>
+
 <%- include('../partials/footer') %>

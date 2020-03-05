@@ -17,9 +17,9 @@
         <option value="Rice" <%= recipe.keyIngredient === 'Rice' ? 'selected' : null %>>Rice</option>
     </select>
     <label>Ingredients:</label>
-    <textarea rows="4" wrap="soft" name="ingredients" value="<%= recipe.ingredients %>"></textarea>
+    <textarea rows="4" wrap="soft" name="ingredients"><%= recipe.ingredients %></textarea>
     <label>Instructions:</label>
-    <textarea rows="4" wrap="soft" name="instructions" value="<%= recipe.instructions %>"></textarea>
+    <textarea rows="4" wrap="soft" name="instructions"><%= recipe.instructions %></textarea>
     <label>Image?</label>
     <input type="text" name="img" value="<%= recipe.img %>">
     <label>Servings:</label>
