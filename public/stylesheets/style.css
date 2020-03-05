@@ -1,6 +1,43 @@
-header {
-  text-align: center;
-  text-transform: uppercase;
+* {
+  box-sizing: border-box;
+  font-family: 'Pacifico', serif;
+  margin: 0;
+  padding: 0;
+}
+
+.main_nav_wrapper {
+  background: white;
+  width: 100%;
+  max-width: 960px;
+  margin: auto;
+} 
+
+.delete-recipe {
+    background:none;
+    border:none;
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+}
+
+nav li {
+  display: flex;
+}
+
+nav a {
+  text-decoration: none;
+  color: #FFB230;
+  display: block;
+  padding: 10px;
+}
+
+nav a:hover {
+  color: grey;
 }
 
 html, body {
@@ -17,12 +54,10 @@ main {
 }
 
 body {
-  padding: 50px;
   font-family: 'Pacifico', serif;
-  background-image: url('/images/white-egg-speckled.jpg');
+  background-image: url('/images/eggbowl.jpg');
   background-repeat: no-repeat;
-  background-size: contain;
-  background-color: #FFAE00
+  background-size: cover; 
 }
 
 .cards {
@@ -60,10 +95,23 @@ body {
   display: grid;
   grid-template-rows: 7;
   gap: 5px;
+  color: #eeeeee;
 }
 
-a {
-  color: #00B7FF;
+#show-recipe, #show-comments, #new-recipe-form, #edit-recipe-form {
+  margin: 15px;
+}
+
+input, textarea, select {
+  display: flex;
+  justify-content: center;
+  width: 200px;
+  
+}
+
+.comment {
+  background: white;
+
 }
 
 footer {

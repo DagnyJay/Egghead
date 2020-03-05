@@ -1,8 +1,6 @@
-<%- include('../partials/header') %>
-<nav>
-    <a href="/recipes/<%= recipe._id %>/edit">Edit Recipe</a>
-</nav>
+<%- include('../partials/show') %>
 
+<div class="show-container">
 <section id="show-recipe">
     <div><%= recipe.title %></div>
     <div>Key Ingredients:</div>
@@ -18,11 +16,39 @@
     <div><%= recipe.prepTime %></div>
     <div>Cook Time:</div>
     <div><%= recipe.cookTime%></div>
-
 </section>
 
-<form action="/recipes/<%= recipe._id %>?_method=DELETE" class="delete-form" method="POST">
-    <button class="delete-recipe" type="submit">Delete?</button>
-</form>
+<section id="show-comments">
+<form id="add-comment-form" method="POST" action="/recipes/<%= recipe._id %>/comments">
+    <label>Comments:</label>
+    <textarea name="content"></textarea>
+    <label>Rating:</label>
+    <select name="rating">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+    <input type="submit" value="Add Comment">
+  </form>
 
+  <% if (recipe.comments.length) { %>
+    <% recipe.comments.forEach(comment => { %>
+        <div class="comments">
+            <div class="comment">
+                <div class="comment_rating">
+                    <p> <%= comment.rating %></p>
+                </div>
+                <div class="comment_content">
+                    <p> <%= comment.content %></p>
+                </div>
+            <% }); %>
+            </div>
+        </div>
+<% } else { %> 
+    <h3> Have you made this? Have any tips? Share below! </h3>
+<% } %>
+</section>
+</div>
 <%- include('../partials/footer') %>

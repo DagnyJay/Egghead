@@ -12,6 +12,9 @@
     <div class="main_nav_wrapper">
       <nav>
         <ul>
+          <li class="show-nav"><a href="/recipes/<%= recipe._id %>/edit">Edit Recipe</a></li>
+          <li class="show-nav"><form action="/recipes/<%= recipe._id %>?_method=DELETE" class="delete-form" method="POST"><button class="delete-recipe" type="submit">Delete Recipe</button>
+          </form></li>
           <li><a href="/recipes/new">Add Recipe</a></li>
           <li><a href="/recipes">Egghead Home</a></li>
         </ul>
@@ -19,4 +22,3 @@
     </div>
   </header>
   <main>
-    
