@@ -12,7 +12,7 @@ I dabble with being a weekday vegetarian, so the egg-theme sounded fun to me!
 HTML, CSS, Javascript, NodeJS, Express, and MongoDB.
 
 #### Getting Started ####
-You can view my planning [Trello board here](https://www.google.com)
+You can view my planning [Trello board here](https://trello.com/b/sgJEjvXc/project-2-egghead)
 And here's [Egghead](https://egghead-recipes.herokuapp.com), for your viewing pleasure!
 
 ##### Planned Future Enhancements #####
