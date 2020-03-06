@@ -5,6 +5,14 @@
   padding: 0;
 }
 
+.navbar-fixed, .nav-wrapper {
+  background: #FFB230;
+}
+
+.index_page_title {
+  color: white;
+}
+
 .main_nav_wrapper {
   background: white;
   width: 100%;
@@ -13,8 +21,10 @@
 } 
 
 .delete-recipe {
-    background:none;
-    border:none;
+  background:none;
+  border:none;
+  color: red;
+  font-size: 16px;
 }
 
 nav ul {
@@ -60,9 +70,8 @@ main {
 }
 
 body {
-  font-family: 'Pacifico', serif;
   background-image: url('/images/eggbowl.jpg');
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-size: cover; 
 }
 
@@ -101,88 +110,129 @@ body {
 
 .card_link {
   text-decoration: none;
+  color: #FFB230;
 }
 
 #new-recipe-form, #edit-recipe-form {
   display: grid;
   grid-template-rows: 7;
+  justify-content: center;
   color: #eeeeee;
+  width: 400px;
 }
 
-#show-recipe, #show-comments, #new-recipe-form, #edit-recipe-form {
-  margin: 15px;
+#show-comments {
+  display: inline-block;
+  background: white;
+  margin: 0px 65vh;
+  padding: 20px;
+  border: 2px #FFB230 solid;
+}
+
+#add-comment-form {
+  display: inline;
+}
+
+.dropdown {
+  width: 50px;
+}
+
+#add_comment_button {
+  width: 100px;
+  font-size: 12px;
+}
+
+#new-recipe-form, #edit-recipe-form {
+  margin: 0% 10%;
 }
 
 #show-recipe {
   display: grid;
-  grid-template-columns: 1fr 1fr 2fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-  border: 2px white solid;
+  grid-template-columns: min-content auto;
+  grid-template-rows: min-content auto;
+  gap: 2px;
+  background: white;
+  margin: 10%;
 }
 
 .recipe_img {
   grid-column: 3 / 3;
   grid-row: 1 / span 5;
-  border: 2px white solid;
+  border: 2px  #FFB230 solid;
 }
 
 .recipe_title {
   grid-column: 1 / span 2;
   grid-row: 1 / 1;
-  border: 2px white solid;
+  border: 2px  #FFB230 solid;
 }
 
 .key_ingredients {
   grid-column: 1 / 1;
   grid-row: 2 / 2;
-  border: 2px white solid;
+  border: 2px #FFB230 solid;
 }
 
 .servings{
   grid-column: 2 / 2;
   grid-row: 2 / 2;
-  border: 2px white solid;
+  border: 2px #FFB230 solid;
 }
 
 .ingredient {
   grid-column: 1 / span 2;
   grid-row: 3 / 3;
-  border: 2px white solid;
+  border: 2px  #FFB230 solid;
+  white-space: pre-wrap;
 }
 
 .instructions {
   grid-column: 1 / span 2;
   grid-row: 4 / 4;
-  border: 2px white solid;
+  border: 2px  #FFB230 solid;
+  white-space: pre-wrap;
 }
 
 .prepTime {
   grid-column: 1 / 1;
   grid-row: 5 / 5;
-  border: 2px white solid;
+  border: 2px  #FFB230 solid;
 }
 
 .cookTime {
   grid-column: 2 / 2;
   grid-row: 5 / 5;
-  border: 2px white solid;
+  border: 2px #FFB230 solid;
 }
-
 
 input, textarea, select {
   display: flex;
   justify-content: center;
   width: 450px;
-  
 }
 
 .comment {
   background: white;
+  border: 2px #FFB230 solid;
+}
 
+.comment_rating {
+  display: inline-block;
+  padding: 2px;
+  background: #FFB230;
+  border: 1px #FFB230 solid;
+}
+
+main a {
+  color: #FFB230;
+  font-size: 20px;
 }
 
 footer {
+  color: white;
   position: absolute;
   bottom: 0;
   width: 90%;
+  margin-left: 10%;
+  font-size: 18px;
 }
