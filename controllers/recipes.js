@@ -46,7 +46,8 @@ function edit(req, res) {
 }
 
 function update(req, res) {
-    Recipe.update(req.body, function (err) {
+    Recipe.findByIdAndUpdate(req.params.id, req.body, function (err,recipe) {
+        console.log(recipe)
         if (err) return res.redirect('recipes/edit');
         res.redirect(`/recipes/${req.params.id}`);
     });
