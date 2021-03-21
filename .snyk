@@ -1,0 +1,40 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.19.0
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:extend:20180424':
+    - passport-google-auth > googleapis > google-auth-library > request > extend:
+        patched: '2021-03-21T21:20:36.707Z'
+    - passport-google-auth > googleapis > google-auth-library > gtoken > request > extend:
+        patched: '2021-03-21T21:20:36.707Z'
+  'npm:hoek:20180212':
+    - passport-google-auth > googleapis > google-auth-library > request > hawk > hoek:
+        patched: '2021-03-21T21:20:36.707Z'
+    - passport-google-auth > googleapis > google-auth-library > request > hawk > boom > hoek:
+        patched: '2021-03-21T21:20:36.707Z'
+    - passport-google-auth > googleapis > google-auth-library > request > hawk > sntp > hoek:
+        patched: '2021-03-21T21:20:36.707Z'
+    - passport-google-auth > googleapis > google-auth-library > gtoken > request > hawk > hoek:
+        patched: '2021-03-21T21:20:36.707Z'
+    - passport-google-auth > googleapis > google-auth-library > request > hawk > cryptiles > boom > hoek:
+        patched: '2021-03-21T21:20:36.707Z'
+    - passport-google-auth > googleapis > google-auth-library > gtoken > request > hawk > boom > hoek:
+        patched: '2021-03-21T21:20:36.707Z'
+    - passport-google-auth > googleapis > google-auth-library > gtoken > request > hawk > sntp > hoek:
+        patched: '2021-03-21T21:20:36.707Z'
+    - passport-google-auth > googleapis > google-auth-library > gtoken > request > hawk > cryptiles > boom > hoek:
+        patched: '2021-03-21T21:20:36.707Z'
+  SNYK-JS-LODASH-567746:
+    - passport-google-auth > googleapis > async > lodash:
+        patched: '2021-03-21T21:20:36.707Z'
+  'npm:stringstream:20180511':
+    - passport-google-auth > googleapis > google-auth-library > request > stringstream:
+        patched: '2021-03-21T21:20:36.707Z'
+    - passport-google-auth > googleapis > google-auth-library > gtoken > request > stringstream:
+        patched: '2021-03-21T21:20:36.707Z'
+  'npm:tough-cookie:20170905':
+    - passport-google-auth > googleapis > google-auth-library > request > tough-cookie:
+        patched: '2021-03-21T21:20:36.707Z'
+    - passport-google-auth > googleapis > google-auth-library > gtoken > request > tough-cookie:
+        patched: '2021-03-21T21:20:36.707Z'
